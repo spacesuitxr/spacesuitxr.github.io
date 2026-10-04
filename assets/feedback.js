@@ -10,16 +10,16 @@
 
 const GOOGLE_FORM = {
   // e.g. "https://docs.google.com/forms/d/e/<form id>/formResponse"
-  action: "",
+  action: "https://docs.google.com/forms/d/e/1FAIpQLSfbkOEj-P07GhPJEtjNfYr9FGnzAH3jYsqqFH_hZgk7UD2y6Q/formResponse",
   // The entry.<number> name of each question, read from the form's pre-filled link (SETUP.md).
   entries: {
-    kind: "",
-    headset: "",
-    version: "",
-    scene: "",
-    size: "",
-    details: "",
-    contact: "",
+    kind: "entry.1234782818",
+    headset: "entry.1856537078",
+    version: "entry.2113854210",
+    scene: "entry.704731956",
+    size: "entry.2103048249",
+    details: "entry.930076155",
+    contact: "entry.373773156",
   },
 };
 
