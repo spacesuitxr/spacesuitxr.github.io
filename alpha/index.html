@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SpaceSuit View Alpha</title>
+<meta name="description" content="Feedback, quick start and known limitations for the SpaceSuit View private alpha on Meta Quest.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/feedback.js" defer></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/lockup-white.png" alt="SpaceSuit XR"></a>
+    <nav class="nav">
+      <a href="#feedback-section">Feedback</a>
+      <a href="#quick-start">Quick start</a>
+      <a href="#limitations">Limitations</a>
+      <a href="/privacy/">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="pill">SpaceSuit View · private alpha</span>
+      <h1>Thanks for testing SpaceSuit View.</h1>
+      <p class="lede">Tell us what happened, good or bad. Every report shapes what we fix next.</p>
+      <div class="btns">
+        <a class="btn" href="#feedback-section">Send feedback</a>
+        <a class="btn ghost" href="/guide/SpaceSuit-View-Guide.pdf">Guide (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feedback -->
+  <section class="block" id="feedback-section">
+    <div class="wrap">
+      <p class="kicker">Feedback</p>
+      <h2>Send feedback</h2>
+      <p class="muted">A minute is enough. Please don't include passwords or anything private.</p>
+
+      <form class="fb" id="feedback" novalidate>
+        <fieldset class="field">
+          <legend>What is it about?</legend>
+          <div class="choices">
+            <label><input type="radio" name="kind" value="Something went wrong" required> Something went wrong</label>
+            <label><input type="radio" name="kind" value="A scene wouldn't import or load"> A scene wouldn't import or load</label>
+            <label><input type="radio" name="kind" value="Smoothness or comfort"> Smoothness or comfort</label>
+            <label><input type="radio" name="kind" value="Confusing"> Something was confusing</label>
+            <label><input type="radio" name="kind" value="Idea"> An idea</label>
+            <label><input type="radio" name="kind" value="It worked"> It worked!</label>
+          </div>
+        </fieldset>
+
+        <div class="row2">
+          <fieldset class="field">
+            <legend>Headset</legend>
+            <div class="choices">
+              <label><input type="radio" name="headset" value="Quest 3" required> Quest 3</label>
+              <label><input type="radio" name="headset" value="Quest 3S"> Quest 3S</label>
+              <label><input type="radio" name="headset" value="Quest 2"> Quest 2</label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="version">App version <span class="hint">Shown under About in the app</span></label>
+            <input type="text" id="version" name="version" value="0.2.0" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="row2">
+          <div class="field">
+            <label for="scene">Scene <span class="hint">Its name, or "May beetle", "Potted plant"</span></label>
+            <input type="text" id="scene" name="scene" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="size">Scene size <span class="hint">Splats or file size, if you know it</span></label>
+            <input type="text" id="size" name="size" placeholder="e.g. 500k splats, 120 MB" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="details">What were you doing, and what happened?</label>
+          <textarea id="details" name="details" required
+            placeholder="e.g. Imported a SuperSplat zip at 750k; the progress bar stopped at about half and the app closed."></textarea>
+        </div>
+
+        <div class="field">
+          <label for="contact">Can we reply? <span class="hint">Optional: your Discord name or email, only to follow up on this report</span></label>
+          <input type="text" id="contact" name="contact" autocomplete="off">
+        </div>
+
+        <button class="btn" type="submit">Send feedback</button>
+        <p class="small" style="margin:12px 0 0">Reports are stored in a Google Sheet that only SpaceSuit XR can open.
+          See <a href="/privacy/#feedback">privacy</a>.</p>
+        <div class="status" id="feedback-status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Quick start -->
+  <section class="block" id="quick-start">
+    <div class="wrap">
+      <p class="kicker">Quick start</p>
+      <h2>Your first scene in three minutes</h2>
+
+      <h3>1. Install and open</h3>
+      <ol class="steps">
+        <li>Accept the alpha invitation sent to your Meta account email.</li>
+        <li>In the headset, open the <b>Library</b>, find <b>SpaceSuit View</b> and install it.</li>
+        <li>Open it. The <b>May beetle</b> sample appears with a welcome card. Select <b>Got it</b>.</li>
+      </ol>
+
+      <h3>2. Allow file access</h3>
+      <ol class="steps">
+        <li>The menu shows <b>Allow file access</b>. Point at it and pull the trigger.</li>
+        <li>On the Android page, switch on <b>Allow access to manage all files</b>, then go back to the app.</li>
+      </ol>
+      <p class="small">The app uses this only to list and import scenes in the headset's Download folder. The two samples work without it.</p>
+
+      <h3>3. Get a scene and import it</h3>
+      <ol class="steps">
+        <li>Menu &gt; <b>Import</b> &gt; <b>Browse SuperSplat</b>. Pick a scene and download it as <b>PLY file</b>
+          (not the SOG / "Source file" download).</li>
+        <li>Back in the app, check <b>Splats to keep</b> (500k runs smoother, 750k shows more detail), then select the zip.</li>
+        <li>It opens when it's done, and stays on the <b>Scenes</b> tab for next time.</li>
+      </ol>
+      <p class="small">Upside down? Turn <b>Upright fix</b> off on the Import tab, delete the converted scene on the Scenes tab, and import it again.</p>
+
+      <h3>4. Controls</h3>
+      <div class="drawing"><img src="/assets/controls.png" alt="Quest controllers. Thumbstick: tabs, scroll; in fly mode, move (left) or up and down (right). Menu: open, close. Trigger: select, measure. X and A: whole scene. Y and B: close menu. Grip: hold to move; hold and push the stick up or down to scale." width="1520" height="800"></div>
+      <table>
+        <tr><th>To</th><th>Do this</th></tr>
+        <tr><td>Open or close the menu</td><td>Menu button on the left controller. B or Y also closes it.</td></tr>
+        <tr><td>Move the scene</td><td>Hold a grip and move your hand.</td></tr>
+        <tr><td>Bigger or smaller</td><td>While holding a grip, push the thumbstick up or down.</td></tr>
+        <tr><td>See the whole scene</td><td>Press A or X. To come back close: View &gt; Enter scene.</td></tr>
+        <tr><td>Fly through it</td><td>View &gt; Fly mode. Left stick moves, right stick goes up and down.</td></tr>
+        <tr><td>Measure</td><td>Touch a point with the controller tip and pull the trigger, then a second point. Set the real distance with the thumbstick and pull the trigger to rescale.</td></tr>
+      </table>
+      <p class="muted">The full guide covers every tab and setting: <a href="/guide/SpaceSuit-View-Guide.pdf">SpaceSuit View guide (PDF, 8 pages)</a>.</p>
+    </div>
+  </section>
+
+  <!-- Limitations -->
+  <section class="block" id="limitations">
+    <div class="wrap">
+      <p class="kicker">Good to know</p>
+      <h2>Known limitations</h2>
+      <p class="muted">SpaceSuit View is an early alpha, tested so far on one Meta Quest 3.</p>
+
+      <h3>Smoothness</h3>
+      <p>Small scenes run at the Quest's full 72 frames per second; large ones don't yet. Measured on a Quest 3 with the samples, each seen from about 0.85 m:</p>
+      <table>
+        <tr><th>Scene</th><th>Frames per second</th></tr>
+        <tr><td>Potted plant (269,000 splats)</td><td>71 to 73, the full rate</td></tr>
+        <tr><td>May beetle (500,000 splats)</td><td>44 to 47</td></tr>
+      </table>
+      <p>Scenes imported at 500,000 splats run at about the beetle's rate; 750,000 is slower still. You may notice
+        judder when you turn quickly or fly. If it's uncomfortable, stop, and tell us. Making it faster is planned.</p>
+
+      <h3>Scene size and files</h3>
+      <ul>
+        <li>Imported scenes are reduced to 500,000 splats by default (750,000 optional). Very large scenes lose some fine texture.</li>
+        <li>Supported: standard PLY, SuperSplat compressed PLY, and SuperSplat's "PLY file" zip.</li>
+        <li>Not supported yet: SOG, SPZ, KSPLAT and SPLAT.</li>
+        <li>Size, position and measurements aren't remembered between scenes or sessions yet.</li>
+        <li>Delete in the menu removes the file from the headset for good, after you confirm.</li>
+      </ul>
+
+      <h3>Headsets and controls</h3>
+      <ul>
+        <li>Supported: Meta Quest 3, Quest 3S and Quest 2. All figures above were measured on a Quest 3; a Quest 3S hasn't been tested yet.</li>
+        <li>On a Quest 2, passthrough is black and white and scenes run slower.</li>
+        <li>Controllers are required; hand tracking isn't supported.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 SpaceSuit XR</span>
+    <span><a href="/">Home</a> · <a href="/privacy/">Privacy</a> · <a href="mailto:spacesuitxr@gmail.com">spacesuitxr@gmail.com</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

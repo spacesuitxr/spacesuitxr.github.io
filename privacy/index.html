@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SpaceSuit XR Privacy</title>
+<meta name="description" content="What SpaceSuit View and spacesuitxr.com do with your data.">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/lockup-white.png" alt="SpaceSuit XR"></a>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/alpha/">Alpha</a>
+      <a href="/privacy/" aria-current="page">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <h1>Privacy</h1>
+      <p class="lede">Short version: your scenes stay on your headset. The app has no internet access and no analytics,
+        accounts or advertising.</p>
+      <p class="small">Last updated October 2026. Applies to SpaceSuit View 0.2.0 (alpha) and this website.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap prose">
+      <h2 id="app">The SpaceSuit View app</h2>
+      <h3>What it asks for</h3>
+      <ul>
+        <li><b>All files access</b>, which you grant in the headset. The app uses it only to list, read, convert and
+          delete scene files in the headset's <b>Download</b> folder.</li>
+        <li>It does <b>not</b> ask for internet access, the microphone, the cameras, hand or eye tracking, location or
+          contacts.</li>
+      </ul>
+
+      <h3>What it does with your data</h3>
+      <ul>
+        <li><b>Your scenes stay on the headset.</b> The app reads .ply, .zip and .vsplat files from Download and writes
+          converted scenes there. Importing a zip makes a temporary copy that is deleted when the import ends. It deletes
+          a file only when you confirm.</li>
+        <li><b>No network.</b> The app has no internet permission, so it can't send or receive anything.</li>
+        <li><b>Settings</b> (import size and the upright fix) are stored on the headset.</li>
+        <li><b>Head and controller tracking</b> is used frame by frame to draw the scene and handle input. It is not
+          stored or sent.</li>
+        <li><b>Passthrough</b> is drawn by the headset's system behind the app. The app never receives camera images.</li>
+        <li><b>Diagnostic logs</b> go to the headset's system log, which is reachable only with developer tools. The app
+          doesn't send them anywhere.</li>
+        <li>No accounts, analytics, advertising or crash reporting of our own.</li>
+      </ul>
+
+      <h3>Other apps it opens</h3>
+      <p><b>Browse SuperSplat</b> and <b>Send feedback</b> open the separate Quest Browser. What the browser and the sites
+        you visit collect falls under their own policies.</p>
+
+      <h3>Meta's platform</h3>
+      <p>SpaceSuit View runs on Meta Horizon OS and is built with the Meta XR SDK. What Horizon OS, the Meta Horizon Store
+        and Meta's runtime collect is covered by
+        <a href="https://www.meta.com/legal/quest/privacy-policy/">Meta's privacy policy</a>, not by us, so we don't promise
+        that no data ever leaves your headset.</p>
+
+      <h2 id="feedback">Feedback you send us</h2>
+      <ul>
+        <li>The feedback form on <a href="/alpha/">/alpha</a> sends what you type (the report type, headset, app version,
+          scene, size, your description and, if you choose, a way to reach you) to a Google Form. Responses are stored in a
+          Google Sheet that only SpaceSuit XR can open. Google processes it under
+          <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</li>
+        <li>We use it only to fix and improve SpaceSuit View, and to reply to you if you left contact details.</li>
+        <li>We keep reports for the duration of the alpha and delete them within 12 months after it ends. Ask us to
+          delete yours at any time.</li>
+        <li>If you email us instead, your email stays in our inbox under the same rules.</li>
+      </ul>
+
+      <h2 id="website">This website</h2>
+      <p>spacesuitxr.com is a static site hosted on GitHub Pages. It sets no cookies and has no analytics or trackers.
+        GitHub may log visitors' IP addresses for security, under
+        <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.</p>
+
+      <h2 id="contact">Contact</h2>
+      <p>Questions, or a request to see or delete what you've sent us:
+        <a href="mailto:spacesuitxr@gmail.com">spacesuitxr@gmail.com</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 SpaceSuit XR</span>
+    <span><a href="/">Home</a> · <a href="/alpha/">Alpha</a> · <a href="mailto:spacesuitxr@gmail.com">Contact</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
