@@ -121,3 +121,32 @@ footer a { color: var(--soft); }
   .brand img { height: 24px; }
   form.fb { padding: 18px; }
 }
+
+/* SpaceSuit CAD home (2026-10-11): wider pages, renders of the app */
+.wrap.wide { max-width: 1120px; }
+.hero-cad { padding: 64px 0 56px; background: radial-gradient(ellipse at 80% 10%, #10306e 0%, var(--bg) 62%); }
+.hero-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 40px; align-items: center; }
+.shot { margin: 0; }
+.shot img { display: block; width: 100%; border-radius: var(--radius); border: 1px solid var(--line);
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35); }
+.shot img.paper { background: #fff; }
+.shot figcaption { color: var(--soft); font-size: 15px; margin-top: 10px; }
+.shot figcaption b { color: var(--text); }
+.hero-shot img { border-color: #2c4a7d; }
+.steps-visual { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px 20px; margin: 22px 0 26px; }
+.steps-visual img { aspect-ratio: 4 / 3; object-fit: cover; }
+.steps-visual img.paper { object-fit: contain; }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center; }
+.card.about h3 { margin-top: 0; }
+.card.about p { margin: 0 0 8px; }
+@media (max-width: 900px) {
+  .hero-grid, .split { grid-template-columns: 1fr; }
+  .split.rev .shot { order: 2; }
+  .steps-visual { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .steps-visual { grid-template-columns: 1fr; }
+}
+.grid.grid3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px) { .grid.grid3 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .grid.grid3 { grid-template-columns: 1fr; } }

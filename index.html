@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SpaceSuit XR</title>
-<meta name="description" content="SpaceSuit View puts Gaussian-splat objects and characters in your room on a standalone Meta Quest. Pick them up, turn them, scale and measure them. Private alpha.">
+<title>SpaceSuit CAD · SpaceSuit XR</title>
+<meta name="description" content="SpaceSuit CAD is parametric CAD that runs on its own on a Meta Quest 3. Sketch, constrain, extrude, fillet and assemble real parts in your room, at real size, with controllers or your hands.">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="stylesheet" href="/assets/site.css">
@@ -12,62 +12,148 @@
 <body>
 
 <header class="top">
-  <div class="wrap">
+  <div class="wrap wide">
     <a class="brand" href="/"><img src="/assets/lockup-white.png" alt="SpaceSuit XR"></a>
     <nav class="nav">
-      <a href="/" aria-current="page">Home</a>
-      <a href="/alpha/">Alpha</a>
+      <a href="/" aria-current="page">SpaceSuit CAD</a>
+      <a href="/view/">SpaceSuit View</a>
       <a href="/privacy/">Privacy</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <section class="hero">
-    <div class="wrap">
-      <span class="pill">SpaceSuit View · private alpha · Meta Quest</span>
-      <h1>Splat objects and characters, right in your room.</h1>
-      <p class="lede">SpaceSuit View shows Gaussian splats in passthrough on a standalone Quest. Pick up a scanned
-        object or character, turn it in your hand, walk around it, scale it and measure it. No PC, no cable.</p>
-      <div class="btns">
-        <a class="btn" href="/alpha/">Alpha testers: start here</a>
-        <a class="btn ghost" href="/guide/SpaceSuit-View-Guide.pdf">Read the guide (PDF)</a>
+  <section class="hero hero-cad">
+    <div class="wrap wide">
+      <div class="hero-grid">
+        <div>
+          <span class="pill">SpaceSuit CAD · in development · Meta Quest 3</span>
+          <h1>Parametric CAD, in the room where the work is.</h1>
+          <p class="lede">Sketch, dimension and constrain, then extrude, cut, fillet and assemble real parts on a
+            standalone Quest&nbsp;3. The part floats in front of you, at any size, including its real one.
+            No PC, no cable.</p>
+          <div class="btns">
+            <a class="btn" href="/guide/SpaceSuit-CAD-Quick-Start.pdf">Read the quick start (PDF)</a>
+            <a class="btn ghost" href="mailto:spacesuitxr@gmail.com?subject=SpaceSuit%20CAD">Get in touch</a>
+          </div>
+        </div>
+        <figure class="shot hero-shot"><img src="/assets/cad/hero.jpg" alt="A finished bracket floating above the SpaceSuit CAD console and timeline"></figure>
       </div>
     </div>
   </section>
 
   <section class="block">
-    <div class="wrap">
-      <p class="kicker">SpaceSuit View</p>
-      <h2>What it does today</h2>
+    <div class="wrap wide">
+      <p class="kicker">What it does</p>
+      <h2>The modelling you know from the desktop, in the headset</h2>
+      <p class="muted">History-based, like the CAD packages you already use: every sketch and feature lands on a
+        timeline, and changing an early dimension rebuilds everything after it.</p>
+      <div class="grid grid3">
+        <div class="card"><h3>Sketch with constraints</h3><p>Lines, rectangles, circles, arcs, slots, polygons, ellipses and splines, held by dimensions and relations until the sketch is fully constrained.</p></div>
+        <div class="card"><h3>Build real parts</h3><p>Extrude and cut, revolve, loft, sweep, rib, standard holes, fillets and chamfers, shell, draft, patterns and mirror.</p></div>
+        <div class="card"><h3>Edit anything, any time</h3><p>Pick any step on the timeline and change how it was made. Configurations keep variants of one part.</p></div>
+        <div class="card"><h3>Assemble</h3><p>Bring saved parts together with mates, then drag the mechanism with your hand to see how it moves.</p></div>
+        <div class="card"><h3>See it at real size</h3><p>One press shows the part 1:1 in passthrough, next to the real machine, vise or fixture it's meant for.</p></div>
+        <div class="card"><h3>Exact files in and out</h3><p>Import STEP parts and PDF drawings at true paper size; export STEP for CAM and STL for printing.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap wide">
+      <p class="kicker">How it works</p>
+      <h2>From a drawing to a finished part</h2>
+      <p class="muted">These are renders of the app itself, building a practice bracket from its dimensioned drawing.</p>
+      <div class="steps-visual">
+        <figure class="shot"><img src="/assets/cad/drawing.png" alt="The dimensioned drawing of the practice bracket" class="paper">
+          <figcaption><b>1 · Start from the drawing.</b> Import the PDF and keep it beside you at true paper size.</figcaption></figure>
+        <figure class="shot"><img src="/assets/cad/sketch.jpg" alt="A sketch on the drafting board, dimensioned with the keypad open">
+          <figcaption><b>2 · Sketch on the drafting board.</b> The sketch plane lies flat in front of you. Draw with the controller or a fingertip, and type exact sizes on the keypad.</figcaption></figure>
+        <figure class="shot"><img src="/assets/cad/constrain.jpg" alt="A sketch with a 15 degree angle and tangent constraints">
+          <figcaption><b>3 · Constrain it.</b> Tangents, parallels, angles and lengths, until the board reads <em>fully constrained</em>.</figcaption></figure>
+        <figure class="shot"><img src="/assets/cad/regions.jpg" alt="An extrude with its regions highlighted and the pull arrow">
+          <figcaption><b>4 · Pull it into a solid.</b> Pull the arrow for a rough size, then type the exact one. Pick which regions of the sketch to use.</figcaption></figure>
+        <figure class="shot"><img src="/assets/cad/edges.jpg" alt="Four edges picked for a fillet">
+          <figcaption><b>5 · Finish the edges.</b> Pick edges for fillets and chamfers, turning the part in your hand to reach them.</figcaption></figure>
+        <figure class="shot"><img src="/assets/cad/done.jpg" alt="The finished bracket above the timeline">
+          <figcaption><b>6 · Done, and still editable.</b> Every step stays on the timeline. Export STEP or STL when you're ready.</figcaption></figure>
+      </div>
+      <p><a class="btn ghost" href="/guide/SpaceSuit-CAD-Quick-Start.pdf">Follow it step by step in the quick start (PDF)</a></p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap wide">
+      <div class="split">
+        <div>
+          <p class="kicker">Designed for VR</p>
+          <h2>A control panel, not a floating menu</h2>
+          <p class="muted">The console works like a machine's control panel: a readout, a dial and a jog wheel with
+            CNC-style increments from 10&nbsp;mm down to 0.001&nbsp;mm (or inches), and keys grouped into five modes. Keys
+            are pressed by pointing or by touch, and every one shows a tip when you rest on it.</p>
+          <p class="muted">Precision comes from numbers, not steady hands: a keypad (with arithmetic) opens whenever a size is
+            wanted, and sketches snap to ends, middles, centres and the part's own edges.</p>
+        </div>
+        <figure class="shot"><img src="/assets/cad/console.jpg" alt="The SpaceSuit CAD console in FEATURE mode"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap wide">
+      <div class="split rev">
+        <figure class="shot"><img src="/assets/cad/assembly.jpg" alt="A pin mated into a plate in an assembly"></figure>
+        <div>
+          <p class="kicker">Built for the shop</p>
+          <h2>CAD where the work happens</h2>
+          <p class="muted">A customer sends a part as STEP and its drawing as a PDF. Bring both into the headset, put the
+            part beside the real fixture at real size, design what holds it, check the fit, and send STEP to the
+            machine and STL to the printer, without going back to the desk.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap wide">
+      <p class="kicker">Under the hood</p>
+      <h2>A real CAD kernel, running on the headset</h2>
       <div class="grid">
-        <div class="card"><h3>Hold it, turn it</h3><p>Grab a splat with one hand and look at it from any angle, up close, the way you'd handle the real thing.</p></div>
-        <div class="card"><h3>Any size</h3><p>Shrink a character to fit on your desk or bring an object to life size, with the thumbstick.</p></div>
-        <div class="card"><h3>Measure at real size</h3><p>Measure between two points and set a known distance to bring the splat to its real scale.</p></div>
-        <div class="card"><h3>Bring your own</h3><p>Import PLY files and SuperSplat downloads, converted on the headset in seconds. Nothing leaves the Quest.</p></div>
+        <div class="card"><h3>Open CASCADE</h3><p>The industrial geometry kernel behind FreeCAD, compiled to run natively on the Quest. Exact solids, exact STEP files.</p></div>
+        <div class="card"><h3>Its own sketch solver</h3><p>A constraint solver written for the app, which refuses a dimension that would conflict and tells you why.</p></div>
+        <div class="card"><h3>Smooth by design</h3><p>The part rebuilds in the background, so the headset keeps its frame rate while the geometry is worked out.</p></div>
+        <div class="card"><h3>Controllers or hands</h3><p>Everything works with the Touch controllers, and everything also works with your hands alone.</p></div>
       </div>
-      <p class="note"><b>Early alpha.</b> SpaceSuit View has been tested on one Meta Quest 3 so far. Smaller scenes
-        run at the Quest's full frame rate; larger ones don't yet. Bigger scenes, like rooms, also load, and you can step
-        inside or fly through them, but objects and characters are what it does best today. See the
-        <a href="/alpha/#limitations">known limitations</a>.</p>
+      <p class="note"><b>In development.</b> SpaceSuit CAD is being built and tested on Meta Quest&nbsp;3 and isn't available
+        to download yet. Interested in trying it? Write to
+        <a href="mailto:spacesuitxr@gmail.com?subject=SpaceSuit%20CAD">spacesuitxr@gmail.com</a>.</p>
     </div>
   </section>
 
   <section class="block">
-    <div class="wrap">
-      <p class="kicker">SpaceSuit XR</p>
-      <h2>Standalone VR for captured 3D and precise spatial work</h2>
-      <p class="muted">We're building tools for working with captured 3D in VR, without a PC. The first is a viewer.
-        We're opening it to a small group of founding testers first, to learn what matters before going wider.</p>
-      <p class="muted">Questions? Write to <a href="mailto:spacesuitxr@gmail.com">spacesuitxr@gmail.com</a>.</p>
+    <div class="wrap wide">
+      <div class="split">
+        <div>
+          <p class="kicker">Also from SpaceSuit XR</p>
+          <h2>SpaceSuit View</h2>
+          <p class="muted">Gaussian-splat objects and characters, right in your room. Pick up a scanned object, turn it in
+            your hand, scale it and measure it. In private alpha.</p>
+          <div class="btns"><a class="btn ghost" href="/view/">About SpaceSuit View</a><a class="btn ghost" href="/alpha/">View alpha testers</a></div>
+        </div>
+        <div class="card about">
+          <h3>SpaceSuit XR</h3>
+          <p>We build standalone VR tools for precise spatial work: CAD and captured 3D on the headset, without a PC.</p>
+          <p>Questions? <a href="mailto:spacesuitxr@gmail.com">spacesuitxr@gmail.com</a></p>
+        </div>
+      </div>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="wrap">
+  <div class="wrap wide">
     <span>© 2026 SpaceSuit XR</span>
-    <span><a href="/alpha/">Alpha</a> · <a href="/privacy/">Privacy</a> · <a href="mailto:spacesuitxr@gmail.com">Contact</a></span>
+    <span><a href="/view/">SpaceSuit View</a> · <a href="/alpha/">View alpha</a> · <a href="/privacy/">Privacy</a> · <a href="mailto:spacesuitxr@gmail.com">Contact</a></span>
   </div>
 </footer>
 
