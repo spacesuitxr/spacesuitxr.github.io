@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SpaceSuit CAD Playtest</title>
+<meta name="description" content="Request an invite to playtest SpaceSuit CAD, parametric CAD on Meta Quest 3 and 3S.">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/playtest.js" defer></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/lockup-white.png" alt="SpaceSuit XR"></a>
+    <nav class="nav">
+      <a href="/">SpaceSuit CAD</a>
+      <a href="/playtest/" aria-current="page">Playtest</a>
+      <a href="/privacy/">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="pill">SpaceSuit CAD · playtest</span>
+      <h1>Try SpaceSuit CAD on your Quest.</h1>
+      <p class="lede">We're looking for testers on Meta Quest&nbsp;3 and 3S. Request an invite and we'll email you a private
+        link to install it from the Meta Horizon Store.</p>
+      <div class="btns">
+        <a class="btn" href="#request">Request an invite</a>
+        <a class="btn ghost" href="/guide/SpaceSuit-CAD-Quick-Start.pdf">Quick start (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <p class="kicker">What to expect</p>
+      <h2>About 10 to 15 minutes, seated</h2>
+      <div class="grid">
+        <div class="card"><h3>What to try</h3><p>Start a sketch and draw a shape on the board, give it an exact size,
+          extrude it into a solid, then cut a hole into it. If you have time, open one of the sample assemblies.</p></div>
+        <div class="card"><h3>What helps us most</h3><p>Where you got stuck in the first few minutes, whether pointing,
+          pinching and grabbing felt reliable, and anything that was hard to read or out of reach.</p></div>
+        <div class="card"><h3>Controllers or hands</h3><p>Both work. Hand-tracking feedback is especially welcome.</p></div>
+        <div class="card"><h3>It's a work in progress</h3><p>Expect rough edges. Your models stay on your headset; you
+          can export them as STEP or STL.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="request">
+    <div class="wrap">
+      <p class="kicker">Request an invite</p>
+      <h2>Ask for a playtest link</h2>
+      <p class="muted">We approve invites by hand, usually within a day or two. Please don't include passwords or anything
+        private.</p>
+
+      <form class="fb" id="invite" novalidate>
+        <div class="row2">
+          <div class="field">
+            <label for="name">Name <span class="hint">Or a nickname</span></label>
+            <input type="text" id="name" name="name" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email">Email <span class="hint">Where we send the invite link</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+        </div>
+
+        <fieldset class="field">
+          <legend>Headset</legend>
+          <div class="choices">
+            <label><input type="radio" name="headset" value="Quest 3" required> Quest 3</label>
+            <label><input type="radio" name="headset" value="Quest 3S"> Quest 3S</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend>Your CAD experience</legend>
+          <div class="choices">
+            <label><input type="radio" name="cad" value="Use CAD for work"> I use CAD for work</label>
+            <label><input type="radio" name="cad" value="Hobby"> As a hobby (3D printing, making)</label>
+            <label><input type="radio" name="cad" value="New to CAD"> New to CAD</label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="design">What would you design in it? <span class="hint">Optional</span></label>
+          <textarea id="design" name="design" placeholder="e.g. Fixtures for my shop, brackets for 3D printing, parts for a robot."></textarea>
+        </div>
+
+        <div class="field">
+          <label for="heard">Where did you hear about it? <span class="hint">Optional</span></label>
+          <input type="text" id="heard" name="heard" autocomplete="off">
+        </div>
+
+        <button class="btn" type="submit">Request an invite</button>
+        <p class="small" style="margin:12px 0 0">Requests are stored in a Google Sheet that only SpaceSuit XR can open,
+          and used only to send your invite and follow up on the playtest. See <a href="/privacy/#playtest">privacy</a>.</p>
+        <div class="status" id="invite-status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 SpaceSuit XR</span>
+    <span><a href="/">SpaceSuit CAD</a> · <a href="/privacy/">Privacy</a> · <a href="mailto:spacesuitxr@gmail.com">Contact</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

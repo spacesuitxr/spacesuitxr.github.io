@@ -150,3 +150,7 @@ footer a { color: var(--soft); }
 .grid.grid3 { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 900px) { .grid.grid3 { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .grid.grid3 { grid-template-columns: 1fr; } }
+/* Embedded video (16:9), used by the SpaceSuit CAD hero */
+.video { position: relative; aspect-ratio: 16 / 9; border-radius: var(--radius); overflow: hidden;
+  border: 1px solid #2c4a7d; background: #000; }
+.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }

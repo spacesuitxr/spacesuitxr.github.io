@@ -80,3 +80,16 @@ certificate can take up to an hour. Check https://spacesuitxr.com/alpha/ in the 
   change, and never state more than the committed evidence.
 - After a new guide PDF is rendered in QuestSplat, copy it to `guide/`.
 - Never commit keys: this folder sits next to `C:\SpaceSuitXR\keys`, which must stay outside every repository.
+
+## 2. The playtest invite form (SpaceSuit CAD)
+
+`/playtest/` posts to a second Google Form the same way. Until it exists, the page opens a filled-in email to
+spacesuitxr@gmail.com instead.
+
+1. Signed in as **spacesuitxr@gmail.com**, create a form named "SpaceSuit CAD playtest requests".
+2. Six questions, in this order, all **Short answer** (the fifth **Paragraph**), none required: Name, Email, Headset,
+   CAD experience, What they'd design, Heard about it from.
+3. Settings: "Collect email addresses" and "Limit to 1 response" **off** (the page sends the email as an answer).
+4. Responses > **Link to Sheets**.
+5. Get the field ids from **Get pre-filled link** (type `x` in every field), then in `assets/playtest.js` set `action`
+   to `https://docs.google.com/forms/d/e/<FORM_ID>/formResponse` and each `entries` value to its `entry.<number>`.
